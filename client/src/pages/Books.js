@@ -22,13 +22,13 @@ const Books = () => {
       await axios.delete("http://localhost:8800/books/" + id);
       window.location.reload();
     } catch (err) {
-      console.log(err);
+      alert("There was an error!");
     }
   };
   return (
     <div>
       <div className="header">
-        <h1>Ertay's Book Shop</h1>
+        <h1>Jonquil's Book Shop</h1>
         <Link className="formLink" to="/add">
           Add New Book
         </Link>
@@ -37,8 +37,12 @@ const Books = () => {
       <div className="books">
         {books.map((book) => (
           <div className="book" key={book.id}>
-            <img className="cover-image" src={book.cover} alt="" />
-            <h2>{book.title}</h2>
+            <img
+              className="cover-image"
+              src={require(`./${book.cover}`)}
+              alt=""
+            />
+            <h3>{book.title}</h3>
             <p>{book.desc}</p>
             <h3>{book.price}</h3>
             <div className="del-update-buttons">

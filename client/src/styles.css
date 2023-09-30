@@ -1,112 +1,118 @@
-.App{
-    height:100vh;
-   
+.App {
+  height: 100vh;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+  background: #a1ffce; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #faffd1,
+    #a1ffce
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #faffd1,
+    #a1ffce
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+  margin-bottom: 8px;
 }
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 10px;
-    background-color:beige;
-    margin-bottom: 14px;
+.books {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  gap: 10px;
+  padding-bottom: 20px;
 }
-.books{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    display: flex;
-    gap:10px;
-    padding-bottom: 20px;
-}
-.book{
+.book {
   padding: 10px;
-    display: flex;
-    flex-direction: column;
-    gap:1px;
-    align-items: center;
-    background-color: rgb(245, 245, 239);
-   
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  align-items: center;
+  background-color: rgb(247, 247, 244);
 }
-.cover-image{
-    width:200px;
-    height: 300px;
-    object-fit: cover;
-  
+.cover-image {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
 }
-.del-update-buttons{
-    border-top: 1px solid rgb(228, 224, 224);
-    padding-top: 5px;
-    display: flex;
-    gap:10px;
+.del-update-buttons {
+  border-top: 1px solid rgb(228, 224, 224);
+  padding-top: 5px;
+  display: flex;
+  gap: 10px;
 }
-.delete{
-    font-size: 14px;
-    padding: 3px 6px;
-    background-color: white;
-    cursor: pointer;
-    border: 1px solid rgb(245,191,191);
-    color:rgb(242,100,100)
+.delete {
+  font-size: 14px;
+  padding: 3px 6px;
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid rgb(245, 191, 191);
+  color: rgb(242, 100, 100);
 }
-.extend-btn-width{
-    width:270px;
+.extend-btn-width {
+  width: 270px;
 }
-.update{
-    
-    font-size: 14px;
-   text-decoration: none;
-    padding: 3px 6px;
-    background-color: white;
-    cursor: pointer;
-    border: 1px solid rgb(76, 187, 90);
-    color:rgb(76, 155, 56)
+.update {
+  font-size: 14px;
+  text-decoration: none;
+  padding: 3px 6px;
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid rgb(76, 187, 90);
+  color: rgb(76, 155, 56);
 }
-.form{
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-   
+.form {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgb(247, 247, 244);
 }
-input,textarea{
-    width:250px;
-    padding: 10px;
-    border:1px solid gray;
+input,
+textarea {
+  width: 250px;
+  padding: 10px;
+  border: 1px solid gray;
 }
-button{
-    border:none;
-    padding: 10px;
-    background-color: rgb(87, 172, 70);
-    color:white;
-    font-weight: bold;
-    cursor:pointer;
-   
+button {
+  border: none;
+  padding: 10px;
+  background-color: rgb(87, 172, 70);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
-.formLink{
-    border:none;
-    padding: 10px;
-    background-color: rgb(87, 172, 70);
-    color:white;
-    font-weight: bold;
-    cursor:pointer;
-    text-decoration: none;
+.formLink {
+  border: none;
+  padding: 10px;
+  background-color: rgb(87, 172, 70);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
 }
-.footer{
-    width: 100vw;
-    padding: 30px;
-    background-color: beige;
-    text-align: center;
-    position:absolute;
-    bottom: 0px;
+.footer {
+  width: 100vw;
+  padding: 30px;
+  background-color: beige;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
 }
 @media only screen and (max-width: 600px) {
-    .books {
-      flex-wrap: wrap;
-    }
-    .header{
-        font-size: 10px;
-    }
+  .books {
+    flex-wrap: wrap;
   }
+  .header {
+    font-size: 10px;
+  }
+}

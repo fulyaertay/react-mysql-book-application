@@ -1,12 +1,15 @@
 .App{
     height:100vh;
-    padding:0px 100px;
+   
 
 }
 .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 5px 10px;
+    background-color:beige;
+    margin-bottom: 14px;
 }
 .books{
     display: flex;
@@ -15,21 +18,26 @@
     text-align: center;
     display: flex;
     gap:10px;
+    padding-bottom: 20px;
 }
 .book{
-    flex:1;
+  padding: 10px;
     display: flex;
     flex-direction: column;
-    gap:10px;
+    gap:1px;
     align-items: center;
+    background-color: rgb(245, 245, 239);
+   
 }
 .cover-image{
     width:200px;
     height: 300px;
     object-fit: cover;
-    background-color: rgb(188, 233, 218);
+  
 }
 .del-update-buttons{
+    border-top: 1px solid rgb(228, 224, 224);
+    padding-top: 5px;
     display: flex;
     gap:10px;
 }
@@ -41,7 +49,11 @@
     border: 1px solid rgb(245,191,191);
     color:rgb(242,100,100)
 }
+.extend-btn-width{
+    width:270px;
+}
 .update{
+    
     font-size: 14px;
    text-decoration: none;
     padding: 3px 6px;
@@ -57,8 +69,9 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+   
 }
-input{
+input,textarea{
     width:250px;
     padding: 10px;
     border:1px solid gray;
@@ -70,6 +83,7 @@ button{
     color:white;
     font-weight: bold;
     cursor:pointer;
+   
 }
 .formLink{
     border:none;
@@ -80,3 +94,19 @@ button{
     cursor:pointer;
     text-decoration: none;
 }
+.footer{
+    width: 100vw;
+    padding: 30px;
+    background-color: beige;
+    text-align: center;
+    position:absolute;
+    bottom: 0px;
+}
+@media only screen and (max-width: 600px) {
+    .books {
+      flex-wrap: wrap;
+    }
+    .header{
+        font-size: 10px;
+    }
+  }

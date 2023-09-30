@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import Footer from './Footer'
 
 const Add = () => {
     const [book, setBook]=useState({
@@ -25,16 +26,35 @@ const navigate=useNavigate()
 
     }
   return (
-    <div className='form'>
+    <div>
+     <div className='header'>
+    <h1>
+        Ertay's Book Shop
+        </h1>
+         <button><Link className='formLink' to="/add">Add New Book</Link></button>
+    </div>
+            <div className='form'>
     <h1> Add New Book</h1>
     <input type="text" placeholder="Book title" onChange={handleChange} name="title"/>
-    <input type="text" placeholder="Book description" onChange={handleChange} name="desc"/>
+    <textarea
+        rows={5}
+        type="text"
+        placeholder="Book description"
+        name="desc"
+        onChange={handleChange}
+      />
     <input type="number" placeholder="Book price" onChange={handleChange} name="price"/>
     <input type="text" placeholder="Book cover image" onChange={handleChange} name="cover"/>
-    <button  onClick={handleClick}>Add New Book</button>
+    <button  className='extend-btn-width' onClick={handleClick}>Add New Book</button>
    
       <Link to="/">See all books</Link>
     </div>
+    <div>
+  
+    </div>
+    </div>
+
+    
   )
 }
 

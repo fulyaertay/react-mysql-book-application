@@ -38,6 +38,33 @@
     padding: 3px 6px;
     background-color: white;
     cursor: pointer;
-    border: 1px solid rgb(204,204,243);
-    color:rgb(193,193,234)
+    border: 1px solid rgb(76, 187, 90);
+    color:rgb(76, 155, 56)
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+input{
+    width:250px;
+    padding: 10px;
+    border:1px solid gray;
+}
+button{
+    border:none;
+    padding: 10px;
+    background-color: rgb(87, 172, 70);
+    color:white;
+    font-weight: bold;
+    cursor:pointer;
+}
+.formLink{
+    border:none;
+    padding: 10px;
+    background-color: rgb(87, 172, 70);
+    color:white;
+    font-weight: bold;
+    cursor:pointer;
+    text-decoration: none;
 }

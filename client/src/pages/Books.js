@@ -28,9 +28,13 @@ const Books = () => {
     }
   return (
     <div>
-        <h1>
-        Ertay Book Shop
+    <div className='header'>
+    <h1>
+        Ertay's Book Shop
         </h1>
+         <button><Link className='formLink' to="/add">Add New Book</Link></button>
+    </div>
+       
         <div className='books'>
             {books.map(book=>(
                 <div className='book' key={book.id}>
@@ -38,13 +42,16 @@ const Books = () => {
                 <h2>{book.title}</h2>
                 <p>{book.desc}</p>
                 <span>{book.price}</span>
-                <button className='delete' onClick={()=>handleDelete(book.id)}>Delete</button>
+                <div className='del-update-buttons'>
+                     <button className='delete' onClick={()=>handleDelete(book.id)}>Delete</button>
                <Link className='update' to={`/update/${book.id}`}>Update</Link>
+                </div>
+               
 
                 </div>
             ))}
         </div>
-       <button><Link className='formLink' to="/add">Add New Book</Link></button>
+      
     </div>
   )
 }

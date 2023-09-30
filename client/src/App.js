@@ -1,7 +1,7 @@
 
-import './App.css';
 import Add from './pages/Add';
 import Books from './pages/Books';
+import "./styles.css"
 import {
   BrowserRouter,
   Routes,

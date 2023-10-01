@@ -14,7 +14,7 @@ This is Jonquil's Book Shop application. It's a single-page website that lists b
 
 ## 💻 Features
 
-- List books
-- Add a new book
-- Update a book
-- Delete a book
+- Listing all books
+- Adding a new book
+- Updating a book
+- Deleting a book

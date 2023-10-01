@@ -10,6 +10,7 @@ This is Jonquil's Book Shop application. It's a single-page website that lists b
 - Node JS
 - Express JS
 - Mysql database
+- Axios package
 
 ## 💻 Features
 

@@ -10,11 +10,16 @@ This is Jonquil's Book Shop application. It's a single-page website that lists b
 - Node JS
 - Express JS
 - Mysql database
+- Cypress JS
 - Axios package
 
-## 💻 Features
+## 💻Project Features
 
 - Listing all books
 - Adding a new book
 - Updating a book
 - Deleting a book
+  
+## 💻 Test Results
+-Test specs are designed using Cypress JS
+![test-results](./test-results.png)

@@ -52,7 +52,7 @@ const Books = () => {
               </button>
               <Link
 lassName="update" to={`./update/${book.id}`}
-  state={{ "title":book.title }} // <-- from the array being mapped
+  state={{ "title":book.title,"desc":book.desc, "cover":book.cover,"price":book.price }} // <-- from the array being mapped
 >
  Update
 </Link>

@@ -3,19 +3,22 @@ import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 
-const Update = () => {
+const Update = (props) => {
   const [book, setBook] = useState({
     title: "",
     desc: "",
     price: null,
     cover: "",
   });
+
+
   const handleChange = (e) => {
     setBook((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
   console.log(book);
   const navigate = useNavigate();
   const location = useLocation();
+  console.log(location.state)
   const bookId = location.pathname.split("/")[2];
   console.log(bookId);
   const handleClick = async (e) => {
@@ -44,6 +47,8 @@ const Update = () => {
           placeholder="Book title"
           onChange={handleChange}
           name="title"
+          defaultValue={location.state.title}
+          
         />
         <textarea
           rows={5}

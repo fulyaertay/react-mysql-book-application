@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
+import Update from "./Update";
 
 const Books = () => {
   const [books, setBooks] = useState([]);
@@ -49,9 +50,13 @@ const Books = () => {
               <button className="delete" onClick={() => handleDelete(book.id)}>
                 Delete
               </button>
-              <Link className="update" to={`/update/${book.id}`}>
-                Update
-              </Link>
+              <Link
+lassName="update" to={`./update/${book.id}`}
+  state={{ "title":book.title }} // <-- from the array being mapped
+>
+ Update
+</Link>
+             
             </div>
           </div>
         ))}

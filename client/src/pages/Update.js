@@ -2,7 +2,6 @@ import axios from "axios";
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-
 const Update = (props) => {
   const [book, setBook] = useState({
     title: "",
@@ -11,14 +10,13 @@ const Update = (props) => {
     cover: "",
   });
 
-
   const handleChange = (e) => {
     setBook((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
   console.log(book);
   const navigate = useNavigate();
   const location = useLocation();
-  console.log(location.state)
+  console.log(location.state);
   const bookId = location.pathname.split("/")[2];
   console.log(bookId);
   const handleClick = async (e) => {
@@ -48,7 +46,6 @@ const Update = (props) => {
           onChange={handleChange}
           name="title"
           defaultValue={location.state.title}
-          
         />
         <textarea
           rows={5}

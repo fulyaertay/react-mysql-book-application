@@ -51,17 +51,12 @@ const Books = () => {
                 Delete
               </button>
               <Link
-                lassName="update"
-                to={`./update/${book.id}`}
-                state={{
-                  title: book.title,
-                  desc: book.desc,
-                  cover: book.cover,
-                  price: book.price,
-                }} // <-- from the array being mapped
-              >
-                Update
-              </Link>
+lassName="update" to={`./update/${book.id}`}
+  state={{ "title":book.title,"desc":book.desc, "cover":book.cover,"price":book.price }} // <-- from the array being mapped
+>
+ Update
+</Link>
+             
             </div>
           </div>
         ))}

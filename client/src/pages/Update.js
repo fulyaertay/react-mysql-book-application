@@ -3,11 +3,12 @@ import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Update = (props) => {
+  const location = useLocation();
   const [book, setBook] = useState({
-    title: "",
-    desc: "",
-    price: null,
-    cover: "",
+    title: location.state.title,
+    desc: location.state.desc,
+    price: location.state.price,
+    cover: location.state.cover,
   });
 
   const handleChange = (e) => {
@@ -15,7 +16,7 @@ const Update = (props) => {
   };
   console.log(book);
   const navigate = useNavigate();
-  const location = useLocation();
+
   console.log(location.state);
   const bookId = location.pathname.split("/")[2];
   console.log(bookId);
@@ -46,7 +47,7 @@ const Update = (props) => {
           onChange={handleChange}
           name="title"
           defaultValue={location.state.title}
-          value={book.title?book.title:location.state.title}
+          
         />
         <textarea
           rows={5}
@@ -55,7 +56,7 @@ const Update = (props) => {
           name="desc"
           onChange={handleChange}
           defaultValue={location.state.desc}
-          value={book.desc?book.desc:location.state.desc}
+      
         />
         <input
           type="number"
@@ -63,7 +64,7 @@ const Update = (props) => {
           onChange={handleChange}
           name="price"
           defaultValue={location.state.price}
-          value={book.price?book.price:location.state.price}
+    
           
         />
         <input
@@ -72,7 +73,7 @@ const Update = (props) => {
           onChange={handleChange}
           name="cover"
           defaultValue={location.state.cover}
-          value={book.cover?book.cover:location.state.cover}
+        
         />
         <button className="extend-btn-width" onClick={handleClick}>
           Update the Book

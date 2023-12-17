@@ -47,7 +47,6 @@ const Update = (props) => {
           onChange={handleChange}
           name="title"
           defaultValue={location.state.title}
-          
         />
         <textarea
           rows={5}
@@ -56,7 +55,6 @@ const Update = (props) => {
           name="desc"
           onChange={handleChange}
           defaultValue={location.state.desc}
-      
         />
         <input
           type="number"
@@ -64,8 +62,6 @@ const Update = (props) => {
           onChange={handleChange}
           name="price"
           defaultValue={location.state.price}
-    
-          
         />
         <input
           type="text"
@@ -73,7 +69,6 @@ const Update = (props) => {
           onChange={handleChange}
           name="cover"
           defaultValue={location.state.cover}
-        
         />
         <button className="extend-btn-width" onClick={handleClick}>
           Update the Book
